@@ -1,41 +1,53 @@
 # Edy Cu
 
-**Infrastructure & Developer Tools Engineer | MCP + Web3**
+I build developer tools for Web3 and AI agents. Most of my work sits at the overlap of **MCP (Model Context Protocol)** and **Solana** — connecting LLMs to on-chain data and actions.
 
-I build high-performance infrastructure at the intersection of **AI Agents (Model Context Protocol)** and **Web3 (Solana)**. Based in Jakarta (UTC+7), I operate primarily in async-first, remote engineering environments, optimizing for rigorous documentation, clean architecture, and deep work.
+Based in Jakarta. I work async and remote.
 
-### ⚡ Current Focus
-* Architecting **MCP (Model Context Protocol)** servers to provide LLMs with secure, programmatic access to on-chain environments.
-* Building high-performance blockchain forensic tools, data pipelines, and WebGL visualizations.
-* Hardening prototype infrastructure into production-grade, open-source developer tools.
+## What I'm building
 
-### 🛠 Core Stack
-* **Specialized:** Model Context Protocol (MCP), Solana Web3.js, WebGL, BFS Traversal Algorithms
-* **Languages:** TypeScript, Python, SQL
-* **Backend & Infra:** Node.js, FastAPI, PostgreSQL, Supabase
-* **Frontend:** Next.js, React, Tailwind CSS
+### [PortfolioFull](https://github.com/edycutjong/portfolio-full) — Multi-stack platform (314 commits, 6 releases)
+Monorepo with 5 live services across 4 languages. AI document Q&A with RAG, real-time WebSocket collaboration engine, streaming analytics pipeline, and a Solana staking protocol.
 
----
+`Next.js` · `Python/FastAPI` · `Go` · `Rust/Axum` · `Anchor/Solana` · `Docker` · `CI/CD`
 
-### 📂 Featured Infrastructure & Tooling
+### [RedString](https://github.com/edycutjong/NansenRedString) — On-chain forensic engine
+CLI tool that traces wallet networks using BFS traversal, enriches nodes with financial data, and renders interactive 3D graphs in WebGL. Built on the Nansen CLI.
 
-#### [NansenRedString](https://github.com/edycutjong/NansenRedString) | *On-chain Forensic & Visualization Engine*
-An advanced forensic tool designed for tracking on-chain activity and visualizing wallet networks.
-* **Architecture:** Engineered with a robust CLI, custom caching layer, and data enrichment pipeline.
-* **Tech:** TypeScript, WebGL (3D visualization), Breadth-First Search (BFS) algorithmic traversal.
-* **Status:** Actively transitioning from prototype into a fully maintained developer tool.
+`TypeScript` · `WebGL` · `BFS Algorithms` · `CI/CD` · `Vitest`
 
-#### [BagOS](https://github.com/edycutjong/BagOS) | *Solana MCP Server*
-Infrastructure bridging Large Language Models (LLMs) with decentralized networks.
-* **Architecture:** Standardized MCP implementation enabling AI agents to read, interpret, and securely execute Web3 actions.
-* **Tech:** TypeScript/Python, MCP SDK, Solana Web3.js.
-* **Status:** Undergoing architecture refactoring for low-latency state resolution.
+### [BagOS](https://github.com/edycutjong/BagOS) — Solana MCP server
+MCP server that gives AI agents read/write access to Solana — token analytics, trade execution, wallet auth. Built for the Bags platform.
 
----
+`TypeScript` · `MCP SDK` · `Solana Web3.js` · `Python`
 
-### 📬 Connect
-I advocate for asynchronous communication. I believe the best code is written in states of uninterrupted focus, and the best teams operate via rigorous documentation and clear PRs rather than endless meetings.
+### [Aegis](https://github.com/edycutjong/aegis) — Multi-agent AI action engine
+Autonomous enterprise engine with human-in-the-loop approval, dynamic model routing, semantic caching, and real-time observability.
 
-* **Portfolio:** [edycu.dev](https://www.edycu.dev) *(Under reconstruction)*
-* **Email:** [edy.cu@live.com](mailto:edy.cu@live.com)
-* **LinkedIn:** [https://linkedin.com/in/edy-cu-tjong](https://www.linkedin.com/in/edy-cu-tjong/)
+`Python` · `FastAPI` · `LangGraph` · `Next.js` · `Supabase`
+
+## Stack
+
+**Languages:** TypeScript, Python, Go, Rust, SQL  
+**Backend:** Node.js, FastAPI, Hono, Axum, PostgreSQL, Supabase  
+**Frontend:** Next.js, React, Tailwind CSS  
+**Specialized:** MCP servers, Solana (Web3.js + Anchor), RAG/LangChain, WebGL  
+**DevOps:** Docker, GitHub Actions, Vercel, Railway
+
+## Hackathons
+
+22 BUIDLs on [DoraHacks](https://dorahacks.io/hacker/edycutjong) + 5 projects on [Devpost](https://devpost.com/edycutjong). Recent highlights:
+
+- **AegisGuard / Aegis Intercept** — Real-time flash loan and bridge hack detection (<200ms) using Liquify's indexer
+- **ClawSearch 402** — Pay-per-query web search for AI agents via HTTP 402 + Stellar USDC micropayments
+- **LexExhibit** — Translates raw blockchain data into court-admissible affidavits for crypto litigation
+- **SolSweep** — Compiler-verified AI migration engine for upgrading legacy Solana codebases
+- **RescueNode Zero** — Offline AI triage system for disaster response (sub-1ms queries, zero internet)
+
+## Contact
+
+- **Email:** edy.cu@live.com  
+- **Twitter/X:** [@edycutjong](https://twitter.com/edycutjong)  
+- **LinkedIn:** [linkedin.com/in/edy-cu-tjong](https://id.linkedin.com/in/edy-cu-tjong)  
+- **DoraHacks:** [dorahacks.io/hacker/edycutjong](https://dorahacks.io/hacker/edycutjong)  
+- **Portfolio:** [edycu.dev](https://www.edycu.dev)
