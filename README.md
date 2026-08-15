@@ -1,53 +1,51 @@
 # Edy Cu
 
-I build developer tools for Web3 and AI agents. Most of my work sits at the overlap of **MCP (Model Context Protocol)** and **Solana** — connecting LLMs to on-chain data and actions.
+Agent infrastructure & MCP. I ran AI coding agents as the primary builder across
+**72 hackathons and 139 projects — zero confirmed wins** — then published the
+failure taxonomy my agents now read before they build.
 
-Based in Jakarta. I work async and remote.
+**→ The essay: [139 projects, zero confirmed wins](https://github.com/edycutjong/agent-postmortem-loop/blob/main/ESSAY.md)**
 
-## What I'm building
+Based in Jakarta. Async and remote.
 
-### [PortfolioFull](https://github.com/edycutjong/portfolio-full) — Multi-stack platform (314 commits, 6 releases)
-Monorepo with 5 live services across 4 languages. AI document Q&A with RAG, real-time WebSocket collaboration engine, streaming analytics pipeline, and a Solana staking protocol.
+## Pinned work
 
-`Next.js` · `Python/FastAPI` · `Go` · `Rust/Axum` · `Anchor/Solana` · `Docker` · `CI/CD`
+- **[agent-postmortem-loop](https://github.com/edycutjong/agent-postmortem-loop)** —
+  34 postmortems from 139 projects, distilled into a failure taxonomy and rules my
+  agents load before building. The dataset behind the essay.
+- **[BagOS](https://github.com/edycutjong/BagOS)** — MCP server for Solana (Bags.fm):
+  simulate → approve → sign → send → confirm on every write, spending caps, devnet by
+  default. v2.0.0 on npm with provenance. v1 shipped a fake-success bug — the fix and
+  postmortem are public.
+- **[armsmith](https://github.com/edycutjong/armsmith)** — ARM/Graviton performance
+  benchmark toolkit. Signed releases on PyPI via trusted publishing.
+- **[aegis](https://github.com/edycutjong/aegis)** — Multi-agent support engine that
+  stops and waits for human approval before any destructive action.
+- **[revoker](https://github.com/edycutjong/revoker)** — Approval hygiene for agent,
+  keeper and relayer wallets: threat rules fire and the revoke lands before the
+  drainer does.
+- **[antigen](https://github.com/edycutjong/antigen)** — Prompt-injection immune
+  system for DataHub metadata: sweeps hidden payloads, defuses them in-graph, proves
+  the cure.
 
-### [RedString](https://github.com/edycutjong/NansenRedString) — On-chain forensic engine
-CLI tool that traces wallet networks using BFS traversal, enriches nodes with financial data, and renders interactive 3D graphs in WebGL. Built on the Nansen CLI.
-
-`TypeScript` · `WebGL` · `BFS Algorithms` · `CI/CD` · `Vitest`
-
-### [BagOS](https://github.com/edycutjong/BagOS) — Solana MCP server
-MCP server that gives AI agents read/write access to Solana — token analytics, trade execution, wallet auth. Built for the Bags platform.
-
-`TypeScript` · `MCP SDK` · `Solana Web3.js` · `Python`
-
-### [Aegis](https://github.com/edycutjong/aegis) — Multi-agent AI action engine
-Autonomous enterprise engine with human-in-the-loop approval, dynamic model routing, semantic caching, and real-time observability.
-
-`Python` · `FastAPI` · `LangGraph` · `Next.js` · `Supabase`
+The through-line: **agents that act on real systems need brakes** — approvals, caps,
+simulation, revocation, postmortems.
 
 ## Stack
 
-**Languages:** TypeScript, Python, Go, Rust, SQL  
-**Backend:** Node.js, FastAPI, Hono, Axum, PostgreSQL, Supabase  
-**Frontend:** Next.js, React, Tailwind CSS  
-**Specialized:** MCP servers, Solana (Web3.js + Anchor), RAG/LangChain, WebGL  
-**DevOps:** Docker, GitHub Actions, Vercel, Railway
+TypeScript · Python · Go · Rust — MCP servers · Solana (Web3.js / Anchor) · FastAPI ·
+Next.js · PostgreSQL · Docker · GitHub Actions
 
 ## Hackathons
 
-22 BUIDLs on [DoraHacks](https://dorahacks.io/hacker/edycutjong) + 5 projects on [Devpost](https://devpost.com/edycutjong). Recent highlights:
-
-- **AegisGuard / Aegis Intercept** — Real-time flash loan and bridge hack detection (<200ms) using Liquify's indexer
-- **ClawSearch 402** — Pay-per-query web search for AI agents via HTTP 402 + Stellar USDC micropayments
-- **LexExhibit** — Translates raw blockchain data into court-admissible affidavits for crypto litigation
-- **SolSweep** — Compiler-verified AI migration engine for upgrading legacy Solana codebases
-- **RescueNode Zero** — Offline AI triage system for disaster response (sub-1ms queries, zero internet)
+93 events tracked, 72 entered, 139 projects shipped —
+[DoraHacks](https://dorahacks.io/hacker/edycutjong) ·
+[Devpost](https://devpost.com/edycutjong). Zero confirmed wins; the postmortems were
+the payout.
 
 ## Contact
 
-- **Email:** edy.cu@live.com  
-- **Twitter/X:** [@edycutjong](https://twitter.com/edycutjong)  
-- **LinkedIn:** [linkedin.com/in/edy-cu-tjong](https://id.linkedin.com/in/edy-cu-tjong)  
-- **DoraHacks:** [dorahacks.io/hacker/edycutjong](https://dorahacks.io/hacker/edycutjong)  
-- **Portfolio:** [edycu.dev](https://www.edycu.dev)
+[edy.cu@live.com](mailto:edy.cu@live.com) ·
+[X @edycutjong](https://twitter.com/edycutjong) ·
+[LinkedIn](https://id.linkedin.com/in/edy-cu-tjong) ·
+[edycu.dev](https://www.edycu.dev)
