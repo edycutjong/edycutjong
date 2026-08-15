@@ -1,51 +1,53 @@
-# Edy Cu
+# EDY CU
 
-Agent infrastructure & MCP. I ran AI coding agents as the primary builder across
-**72 hackathons and 139 projects — zero confirmed wins** — then published the
-failure taxonomy my agents now read before they build.
+Jakarta, Indonesia · Remote (async-first)
+edy.cu@live.com · github.com/edycutjong · linkedin.com/in/edy-cu-tjong · edycu.dev
 
-**→ The essay: [139 projects, zero confirmed wins](https://github.com/edycutjong/agent-postmortem-loop/blob/main/ESSAY.md)**
+## SUMMARY
 
-Based in Jakarta. Async and remote.
+Full-stack engineer specializing in agent infrastructure and MCP (Model Context
+Protocol) — building the safety layer that lets AI agents act on real systems:
+transaction lifecycles, human-in-the-loop approval, spending caps, approval
+revocation, prompt-injection defense. TypeScript · Python · Go · Rust.
+14 years shipping software.
 
-## Pinned work
+## SELECTED PROJECTS
 
-- **[agent-postmortem-loop](https://github.com/edycutjong/agent-postmortem-loop)** —
-  34 postmortems from 139 projects, distilled into a failure taxonomy and rules my
-  agents load before building. The dataset behind the essay.
-- **[BagOS](https://github.com/edycutjong/BagOS)** — MCP server for Solana (Bags.fm):
-  simulate → approve → sign → send → confirm on every write, spending caps, devnet by
-  default. v2.0.0 on npm with provenance. v1 shipped a fake-success bug — the fix and
-  postmortem are public.
-- **[armsmith](https://github.com/edycutjong/armsmith)** — ARM/Graviton performance
-  benchmark toolkit. Signed releases on PyPI via trusted publishing.
-- **[aegis](https://github.com/edycutjong/aegis)** — Multi-agent support engine that
-  stops and waits for human approval before any destructive action.
-- **[revoker](https://github.com/edycutjong/revoker)** — Approval hygiene for agent,
-  keeper and relayer wallets: threat rules fire and the revoke lands before the
-  drainer does.
-- **[antigen](https://github.com/edycutjong/antigen)** — Prompt-injection immune
-  system for DataHub metadata: sweeps hidden payloads, defuses them in-graph, proves
-  the cure.
+**BagOS — MCP server for Solana** · TypeScript, Solana Web3.js, MCP SDK
 
-The through-line: **agents that act on real systems need brakes** — approvals, caps,
-simulation, revocation, postmortems.
+- Shipped v2.0.0 to npm with provenance; listed in the official MCP registry.
+  Full write-path lifecycle: simulate → approve → sign → send → confirm, with
+  per-transaction and per-session spending caps, devnet by default.
+- Caught and publicly remediated a fake-success defect in v1: deprecated the
+  release, published the postmortem, and added CI gates (tarball audit,
+  fabricated-success grep) that make the bug class unshippable.
+- 212 tests with enforced 100% coverage; CodeQL and secret scanning clean;
+  CI/CD with signed publishing and auto-deprecation.
 
-## Stack
+**aegis — multi-agent support engine with human-in-the-loop** · Python, FastAPI, LangGraph
 
-TypeScript · Python · Go · Rust — MCP servers · Solana (Web3.js / Anchor) · FastAPI ·
-Next.js · PostgreSQL · Docker · GitHub Actions
+- Agent investigates issues via SQL and documentation, proposes actions, and
+  hard-stops for human approval before any destructive operation.
 
-## Hackathons
+**revoker — approval hygiene for automated wallets** · EVM
 
-93 events tracked, 72 entered, 139 projects shipped —
-[DoraHacks](https://dorahacks.io/hacker/edycutjong) ·
-[Devpost](https://devpost.com/edycutjong). Zero confirmed wins; the postmortems were
-the payout.
+- Threat rules auto-revoke dangerous token approvals on agent, keeper, and
+  relayer signers before drain contracts execute; demonstrated on-chain.
 
-## Contact
+**antigen — prompt-injection defense for metadata graphs** · DataHub
 
-[edy.cu@live.com](mailto:edy.cu@live.com) ·
-[X @edycutjong](https://twitter.com/edycutjong) ·
-[LinkedIn](https://id.linkedin.com/in/edy-cu-tjong) ·
-[edycu.dev](https://www.edycu.dev)
+- Sweeps catalog entities for jailbreak and exfiltration payloads, including
+  invisible-Unicode variants; defuses them in-graph with tamper-evident hashes
+  and maps blast radius through lineage.
+
+**armsmith — ARM/Graviton benchmark toolkit** · Python
+
+- Signed releases on PyPI via trusted publishing; versioned documentation.
+
+## SKILLS
+
+**Languages:** TypeScript, Python, Go, Rust, SQL
+**Systems:** MCP servers, Solana (Web3.js / Anchor), EVM, Node.js, FastAPI,
+Next.js, PostgreSQL, Supabase
+**Practices:** CI/CD (GitHub Actions), signed/provenance publishing (npm, PyPI),
+CodeQL, enforced coverage gates, Docker
