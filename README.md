@@ -1,53 +1,48 @@
-# EDY CU
+# Edy Cu
 
-Jakarta, Indonesia · Remote (async-first)
-edy.cu@live.com · github.com/edycutjong · linkedin.com/in/edy-cu-tjong · edycu.dev
+I build the safety layer that lets AI agents move real money: spend caps, human sign-off, approval revocation and prompt-injection defense. My work is mostly MCP servers and on-chain tooling in TypeScript and Python.
 
-## SUMMARY
+Jakarta, Indonesia (UTC+7) · Open to remote, async-first · [edy.cu@live.com](mailto:edy.cu@live.com) · [LinkedIn](https://linkedin.com/in/edy-cu-tjong) · [edycu.dev](https://edycu.dev)
 
-Full-stack engineer specializing in agent infrastructure and MCP (Model Context
-Protocol) — building the safety layer that lets AI agents act on real systems:
-transaction lifecycles, human-in-the-loop approval, spending caps, approval
-revocation, prompt-injection defense. TypeScript · Python · Go · Rust.
-14 years shipping software.
+---
 
-## SELECTED PROJECTS
+## Proof
 
-**BagOS — MCP server for Solana** · TypeScript, Solana Web3.js, MCP SDK
+| | |
+|---|---|
+| 🏆 **Track winner, QwenCloud Hackathon 2026** | [Tarmac](https://github.com/edycutjong/tarmac): Track 3, Agent Society. US$7,000 cash prize. [Submission](https://qwencloud-hackathon.devpost.com/submissions/1103857-tarmac) |
+| 🔀 **Merged upstream** | [KeeperHub PR #2277](https://github.com/KeeperHub/keeperhub/pull/2277): trace-method availability probe with 38 tests. Two review rounds; shipped in [v3.5.0](https://github.com/KeeperHub/keeperhub/releases/tag/v3.5.0) |
+| 🥈 **2nd place, Nansen CLI Build Challenge (week 2)** | [NansenTerm](https://github.com/edycutjong/nansen-term), one of 4 entries, one in every week of the challenge ([all submissions](https://academy.nansen.ai/en/help/articles/6399546-nansen-cli-builds)) |
+| 📦 **In use** | [`bagos-mcp-server`](https://www.npmjs.com/package/bagos-mcp-server) on npm, published with provenance and listed in the [MCP Registry](https://registry.modelcontextprotocol.io/?q=bagos) |
 
-- Shipped v2.0.0 to npm with provenance; listed in the official MCP registry.
-  Full write-path lifecycle: simulate → approve → sign → send → confirm, with
-  per-transaction and per-session spending caps, devnet by default.
-- Caught and publicly remediated a fake-success defect in v1: deprecated the
-  release, published the postmortem, and added CI gates (tarball audit,
-  fabricated-success grep) that make the bug class unshippable.
-- 212 tests with enforced 100% coverage; CodeQL and secret scanning clean;
-  CI/CD with signed publishing and auto-deprecation.
+## Selected work
 
-**aegis — multi-agent support engine with human-in-the-loop** · Python, FastAPI, LangGraph
+**[BagOS](https://github.com/edycutjong/BagOS)**: an MCP server that lets an AI agent trade on Solana without being able to drain the wallet. TypeScript, MCP SDK, @solana/web3.js.
+- Every write goes simulate → preview → single-use confirmation → sign → confirm, with per-transaction and per-session SOL caps.
+- I found a fake-success bug in v1, deprecated that release, [documented it in the 2.0.0 changelog](https://github.com/edycutjong/BagOS/blob/main/CHANGELOG.md), and added CI gates that make that class of bug unshippable.
+- An outside adversarial review found a critical wallet-drain: a cloned repo's `.env` could redirect sign-in, and the sign-in step would sign a transaction. I fixed it in a private fork, shipped 3.0.0, deprecated every affected version on npm, and published [GHSA-g679-3wq7-mh3m](https://github.com/edycutjong/BagOS/security/advisories/GHSA-g679-3wq7-mh3m).
+- I made the session cap safe under concurrent calls and fail closed when a trade's outcome is unknown ([postmortem](https://github.com/edycutjong/BagOS/blob/main/docs/postmortem-session-cap.md)).
+- 407 tests at 100% line and branch coverage. CodeQL, gitleaks, SLSA provenance on every release.
 
-- Agent investigates issues via SQL and documentation, proposes actions, and
-  hard-stops for human approval before any destructive operation.
+**[Tarmac](https://github.com/edycutjong/tarmac)**: a group of agents that rebooks passengers after flight disruptions, using sealed-bid seat allocation and a hash-chained audit log that can be re-verified byte for byte in the cloud. Python, Qwen, Alibaba Cloud Function Compute. *Hackathon track winner.*
 
-**revoker — approval hygiene for automated wallets** · EVM
+**[revoker](https://github.com/edycutjong/revoker)**: threat rules that revoke dangerous token approvals on agent, keeper and relayer wallets before a drain contract can use them. Demonstrated on chain through KeeperHub; built for the [Agents Onchain](https://dorahacks.io/buidl/47528) hackathon.
 
-- Threat rules auto-revoke dangerous token approvals on agent, keeper, and
-  relayer signers before drain contracts execute; demonstrated on-chain.
+**[aegis](https://github.com/edycutjong/aegis)**: a multi-agent support engine (FastAPI, LangGraph) that investigates through SQL and docs, proposes actions, and stops for human approval before anything destructive.
 
-**antigen — prompt-injection defense for metadata graphs** · DataHub
+**[antigen](https://github.com/edycutjong/antigen)**: finds and defuses prompt-injection payloads in a DataHub metadata graph, including invisible-Unicode variants, and maps the blast radius through lineage.
 
-- Sweeps catalog entities for jailbreak and exfiltration payloads, including
-  invisible-Unicode variants; defuses them in-graph with tamper-evident hashes
-  and maps blast radius through lineage.
+## How I work
 
-**armsmith — ARM/Graviton benchmark toolkit** · Python
+- **I ship with AI coding agents, and I verify what they write.** Every claim in a README has to match the code; I've published commits titled *"correct the claims an audit disproved"*. Tests are named after the defects they prevent.
+- **I publish failures.** I write postmortems for my own bugs, including ones nobody else reported.
+- **Conventional commits, release automation, and security scanning on every repo I keep.**
 
-- Signed releases on PyPI via trusted publishing; versioned documentation.
+**Stack:** TypeScript, Python, SQL · MCP, Node.js, FastAPI, Next.js, PostgreSQL · Solana, EVM (Foundry) · GitHub Actions, npm/PyPI trusted publishing, Docker
 
-## SKILLS
+<!-- EXPERIENCE: fill in from your CV, or delete this block. Only claims you can back with a reference or a link.
+## Before this
+**Company** · Title · 20XX–20XX: one line with a number in it
+-->
 
-**Languages:** TypeScript, Python, Go, Rust, SQL
-**Systems:** MCP servers, Solana (Web3.js / Anchor), EVM, Node.js, FastAPI,
-Next.js, PostgreSQL, Supabase
-**Practices:** CI/CD (GitHub Actions), signed/provenance publishing (npm, PyPI),
-CodeQL, enforced coverage gates, Docker
+<sub>More hackathon builds live at [edycu-hackathons](https://edycu.dev/hackathons).</sub>
