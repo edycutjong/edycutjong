@@ -44,5 +44,6 @@ Jakarta, Indonesia (UTC+7) · Open to remote, async-first · [edy.cu@live.com](m
 ## Before this
 **Company** · Title · 20XX–20XX: one line with a number in it
 -->
-
+<!-- 
 <sub>More hackathon builds live at [edycu-hackathons](https://edycu.dev/hackathons).</sub>
+-->
